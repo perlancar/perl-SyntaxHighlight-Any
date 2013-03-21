@@ -1,5 +1,11 @@
 Revision history for SyntaxHighlight-Any
 
+0.02    2013-03-21 (SHARYANTO)
+
+        - highlight_string(): Instead of dying when no backend is available,
+          warn via Log::Any and return input as-is.
+
+
 0.01    2013-03-21 (SHARYANTO)
 
         First release.
