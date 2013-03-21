@@ -1,0 +1,55 @@
+#!/usr/bin/perl
+
+use 5.010;
+use autodie;
+use strict;
+use warnings;
+use Log::Any::App '$log';
+
+use File::Slurp;
+use Getopt::Long;
+use SyntaxHighlight::Any qw(highlight_string list_languages);
+
+# VERSION
+
+my %opts;
+Getopt::Long::Configure("permute");
+GetOptions(
+    'lang|l=s'   => \$opts{lang},
+    'output|o=s' => \$opts{output},
+    'lang-list' => sub {
+        print map {"$_\n"} list_languages();
+        exit 0;
+    },
+    'help' => sub {
+        print <<EOT;
+highlight-string - Syntax-highlight code using various backends
+
+Usage:
+  highlight-string [--lang=S] [--output=S] FILE ...
+  highlight-string --help
+
+Options:
+  --lang=S (-l)     Set language (use --lang-list to print list of known
+                    languages)
+  --output=S (-o)   Set output format (either 'ansi' or 'html')
+
+EOT
+        exit 0;
+    },
+);
+
+if (!@ARGV || @ARGV==1 && $ARGV[0] eq '-') {
+    local $/;
+    my $str = <STDIN>;
+    print highlight_string($str, \%opts);
+} else {
+    for my $f (@ARGV) {
+        $log->debugf("Formatting file %s ...", $f);
+        my $str = read_file($f);
+        print highlight_string($str, \%opts);
+    }
+}
+
+# ABSTRACT: Syntax-highlight code using various backends
+# PODNAME: highlight-string
