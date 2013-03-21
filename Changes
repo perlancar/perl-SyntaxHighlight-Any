@@ -1,5 +1,12 @@
 Revision history for SyntaxHighlight-Any
 
+0.03    2013-03-21 (SHARYANTO)
+
+        - Minor tweaks to POD/messages.
+
+        - Add some more commonly-used langs.
+
+
 0.02    2013-03-21 (SHARYANTO)
 
         - highlight_string(): Instead of dying when no backend is available,
