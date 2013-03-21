@@ -106,7 +106,8 @@ sub highlight_string {
         }
     }
 
-    $log->warn("No syntax highlighting backend is available");
+    $log->warnf("No syntax highlighting backend for (l=%s, o=%s) is available",
+                $opts->{lang}, $opts->{output});
     return $str;
 }
 
