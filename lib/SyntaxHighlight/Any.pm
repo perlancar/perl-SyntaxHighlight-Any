@@ -150,14 +150,14 @@ sub list_languages {
      $blanks++ unless /\S/;
  }
  EOT
- say highlight_string($str);       # syntax-highlighted code output to terminal
+ say highlight_string($str, {lang=>"perl"});
  my @lang = detect_language($str); # => ("perl")
 
 
 =head1 DESCRIPTION
 
 B<CAVEAT: EARLY DEVELOPMENT MODULE. SOME FUNCTIONS NOT YET IMPLEMENTED. HELP ON
-ADDING BACKENDS APPRECATED.>
+ADDING BACKENDS APPRECIATED.>
 
 This module provides a common interface for syntax highlighting and detecting
 programming language in code.
@@ -225,15 +225,6 @@ detection fails, C<ansi> is chosen.
 =head2 list_languages() => LIST
 
 List known languages.
-
-
-=head1 LANGUAGES
-
-Note: case-sensitive.
-
- perl
- json
- yaml
 
 
 =head1 BACKENDS
