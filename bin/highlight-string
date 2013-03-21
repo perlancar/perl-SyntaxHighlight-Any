@@ -27,12 +27,14 @@ highlight-string - Syntax-highlight code using various backends
 
 Usage:
   highlight-string [--lang=S] [--output=S] FILE ...
+  highlight-string --lang-list
   highlight-string --help
 
 Options:
   --lang=S (-l)     Set language (use --lang-list to print list of known
                     languages)
   --output=S (-o)   Set output format (either 'ansi' or 'html')
+  --lang-list       Show list of supported languages.
 
 EOT
         exit 0;
@@ -53,3 +55,18 @@ if (!@ARGV || @ARGV==1 && $ARGV[0] eq '-') {
 
 # ABSTRACT: Syntax-highlight code using various backends
 # PODNAME: highlight-string
+
+=head1 SYNOPSIS
+
+ % highlight-string -l perl script.pl
+ % highlight-string --help
+
+
+=head1 DESCRIPTION
+
+This program is a simple command-line interface for L<SyntaxHighlight::Any>.
+
+
+=head1 SEE ALSO
+
+=cut
