@@ -1,5 +1,12 @@
 Revision history for SyntaxHighlight-Any
 
+0.04    2014-05-17 (SHARYANTO)
+
+        - No functional changes.
+
+        - Replace File::Slurp with File::Slurp::Tiny.
+
+
 0.03    2013-03-21 (SHARYANTO)
 
         - Minor tweaks to POD/messages.
