@@ -6,7 +6,7 @@ use strict;
 use warnings;
 use Log::Any::App '$log';
 
-use File::Slurp;
+use File::Slurp::Tiny qw(read_file);
 use Getopt::Long;
 use SyntaxHighlight::Any qw(highlight_string list_languages);
 
