@@ -54,7 +54,7 @@ if (!@ARGV || @ARGV==1 && $ARGV[0] eq '-') {
 }
 
 # ABSTRACT: Syntax-highlight code using various backends
-# PODNAME: highlight-string
+# PODNAME:
 
 =head1 SYNOPSIS
 
