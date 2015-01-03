@@ -1,11 +1,12 @@
 package SyntaxHighlight::Any;
 
+# DATE
+# VERSION
+
 use 5.010001;
 use strict;
 use warnings;
 use Log::Any '$log';
-
-# VERSION
 
 require Exporter;
 our @ISA       = qw(Exporter);
@@ -231,19 +232,6 @@ List known languages.
 
 Currently, the distribution does not pull the backends as dependencies. Please
 make sure you install desired backends.
-
-
-=head1 TODO
-
-=over
-
-=item * Option to select preferred (or change choosing order of) backends
-
-=item * Option: color theme
-
-=item * Function to detect/list available backends
-
-=back
 
 
 =head1 SEE ALSO
