@@ -6,7 +6,7 @@ package SyntaxHighlight::Any;
 use 5.010001;
 use strict;
 use warnings;
-use Log::Any '$log';
+use Log::Any::IfLOG '$log';
 
 require Exporter;
 our @ISA       = qw(Exporter);
