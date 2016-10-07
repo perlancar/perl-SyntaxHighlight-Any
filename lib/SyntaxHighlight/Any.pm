@@ -241,4 +241,21 @@ L<JSON::Color> or L<Syntax::Highlight::JSON> (despite the module name, the
 latter is an encoder, not strictly a string syntax highlighter). For YAML
 there's L<YAML::Tiny::Color>.
 
+An article in late 2012 describing the various CPAN modules for syntax
+highlighting
+L<http://blogs.perl.org/users/steven_haryanto/2012/11/the-sad-state-of-syntax-highlighting-libraries-on-cpan.html>
+(with the actual reviews posted to L<http://cpanratings.perl.org>). Modules
+mentioned including: L<Syntax::SourceHighlight>
+(L<reviews|http://cpanratings.perl.org/dist/Syntax-SourceHighlight>),
+L<Syntax::Highlight::Engine::Kate>
+(L<reviews|http://cpanratings.perl.org/dist/Syntax-Highlight-Engine-Kate>),
+L<Syntax::Highlight::JSON>
+(L<reviews|http://cpanratings.perl.org/dist/Syntax-Highlight-JSON>),
+L<Syntax::Highlight::Engine::Simple>
+(L<reviews|http://cpanratings.perl.org/dist/Syntax-Highlight-Engine-Simple>),
+L<Syntax::Highlight::Universal>
+(L<reviews|http://cpanratings.perl.org/dist/Syntax-Highlight-Universal>), and
+L<Text::Highlight> (L<reviews|http://cpanratings.perl.org/dist/text-highlight>).
+Some non-Perl solutions are also mentioned.
+
 =cut
