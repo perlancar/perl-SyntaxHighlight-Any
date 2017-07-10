@@ -6,7 +6,7 @@ package SyntaxHighlight::Any;
 use 5.010001;
 use strict;
 use warnings;
-use Log::Any::IfLOG '$log';
+use Log::ger;
 
 require Exporter;
 our @ISA       = qw(Exporter);
@@ -108,7 +108,7 @@ sub highlight_string {
 
         $res = _try_source_highlight_binary(\$str, $opts);
         if (defined $res) {
-            $log->trace("Used source-highlight binary to format code");
+            log_trace("Used source-highlight binary to format code");
             return $res;
         }
     }
@@ -116,12 +116,12 @@ sub highlight_string {
     if ($LANGS{ $opts->{lang} }{pygments}) {
         $res = _try_pygments_binary(\$str, $opts);
         if (defined $res) {
-            $log->trace("Used pygmentize binary to format code");
+            log_trace("Used pygmentize binary to format code");
             return $res;
         }
     }
 
-    $log->warnf("No syntax highlighting backend for (l=%s, o=%s) is available",
+    log_warn("No syntax highlighting backend for (l=%s, o=%s) is available",
                 $opts->{lang}, $opts->{output});
     return $str;
 }
