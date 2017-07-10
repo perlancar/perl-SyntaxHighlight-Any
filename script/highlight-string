@@ -1,16 +1,17 @@
 #!perl
 
+# DATE
+# VERSION
+
 use 5.010;
 use autodie;
 use strict;
 use warnings;
-use Log::Any::App '$log';
+use Log::ger;
 
-use File::Slurp::Tiny qw(read_file);
+use File::Slurper qw(read_text);
 use Getopt::Long;
 use SyntaxHighlight::Any qw(highlight_string list_languages);
-
-# VERSION
 
 my %opts;
 Getopt::Long::Configure("permute");
@@ -47,7 +48,7 @@ if (!@ARGV || @ARGV==1 && $ARGV[0] eq '-') {
     print highlight_string($str, \%opts);
 } else {
     for my $f (@ARGV) {
-        $log->debugf("Formatting file %s ...", $f);
+        log_debug("Formatting file %s ...", $f);
         my $str = read_file($f);
         print highlight_string($str, \%opts);
     }
