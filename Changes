@@ -1,4 +1,4 @@
-0.07    2017-07-10 (PERLANCAR)
+0.07    2017-07-10  Released-By: PERLANCAR
 
 	- No functional changes.
 
@@ -7,40 +7,40 @@
 	- Replace Log::Any with Log::ger.
 
 
-0.06    2015-08-18 (PERLANCAR)
+0.06    2015-08-18  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Switch from Log::Any to Log::Any::IfLOG.
 
 
-0.05    2015-01-03 (PERLANCAR)
+0.05    2015-01-03  Released-By: PERLANCAR
 
 	- No functional changes.
 
 	- Rebuild (Generate TODO.md).
 
 
-0.04    2014-05-17 (SHARYANTO)
+0.04    2014-05-17  Released-By: SHARYANTO
 
         - No functional changes.
 
         - Replace File::Slurp with File::Slurp::Tiny.
 
 
-0.03    2013-03-21 (SHARYANTO)
+0.03    2013-03-21  Released-By: SHARYANTO
 
         - Minor tweaks to POD/messages.
 
         - Add some more commonly-used langs.
 
 
-0.02    2013-03-21 (SHARYANTO)
+0.02    2013-03-21  Released-By: SHARYANTO
 
         - highlight_string(): Instead of dying when no backend is available,
           warn via Log::Any and return input as-is.
 
 
-0.01    2013-03-21 (SHARYANTO)
+0.01    2013-03-21  Released-By: SHARYANTO
 
         - First release.
